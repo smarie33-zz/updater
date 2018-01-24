@@ -1,0 +1,34 @@
+{
+  "name": "updater-card-test",
+  "version": "1.0.0",
+  "description": "Test for Updater. Using any technology of choice, build a component that renders a single business partner card. The card has 2 views - mobile and desktop. Each viewport example below shows 2 examples of cards.",
+  "main": "index.html",
+  "scripts": {
+    "build": "gulp",
+    "dev": "gulp watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smarie33/updater.git"
+  },
+  "author": "Shannon Mosley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/smarie33/updater/issues"
+  },
+  "homepage": "https://github.com/smarie33/updater#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "browser-sync": "^2.23.5",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-sass": "^3.1.0",
+    "run-sequence": "^2.2.1"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  }
+}
