@@ -1,17 +1,18 @@
 <html>
 	<head>
-		<title>Shannon Mosley Updater Test</title>
+		<!-- <title>Shannon Mosley Updater Test</title> -->
 		<link rel="stylesheet" href="css/style.css">
+		<script src="https://use.fontawesome.com/2b01ec17b1.js"></script>
 	</head>
 	<body>
 		<div id="root">
 			<div class="container">
-				<h1 class="text-center">Updater Card Test by Shannon Mosley :-)</h1>
-				<h4>Using any technology of choice, build a component that renders a single business partner card. The card has 2 views - mobile and desktop. Each viewport example below shows 2 examples of cards.</h4>
+				<!-- <h1 class="text-center">Updater Card Test by Shannon Mosley :-)</h1>
+				<h4>Using any technology of choice, build a component that renders a single business partner card. The card has 2 views - mobile and desktop. Each viewport example below shows 2 examples of cards.</h4> -->
 			</div>
 			
 			<div id="cards">
-				<updater-card v-bind:cards="cards"></updater-card>
+				<updater-card v-for="(card, key, index) in cards" :key="index" :info="card"></updater-card>
 			</div>
 
 		</div>

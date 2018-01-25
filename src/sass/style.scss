@@ -1,9 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
+$black: #000000;
+$white: #ffffff;
+$gray: #c6c6c6;
+$green: #1d9d74;
+$blue: #1d698d;
+$break: 992px;
+
 html,body{
 	margin: 0;
 	padding: 0;
 	font-family: 'Montserrat', sans-serif;
+	color: $black;
+	font-size: 14px;
 }
 
 .text-center{
@@ -11,8 +20,59 @@ html,body{
 }
 
 .container{
-	max-width: 800px;
+	max-width: 1000px;
 	margin: auto;
 	padding-top: 20px;
 	position: relative;
+}
+
+.text-bold{
+	font-weight: bold;
+}
+
+.text-blue{
+	color: $blue;
+}
+
+.text-gray{
+	color: $gray;
+}
+
+.card{
+	max-width: 500px;
+	border: 20px solid $gray;
+	display:inline-block;
+
+	.info{
+		padding: 50px;
+		.logo{
+			margin:auto;
+		}
+		.company{
+			font-size: 10px;
+		}
+		.features{
+			@media screen and (max-width: $break) {
+				display: none;
+			}
+		}
+		.profile{
+			text-decoration: none;
+			color: $black;
+			display: block;
+			margin: auto;
+		}
+		.button{
+			display: block;
+			text-decoration: none;
+			margin: auto;
+			padding: 30px 100px;
+			background-color: $blue;
+			color: $white;
+			border-radius: 5px;
+			@media screen and (max-width: $break) {
+				padding: 15px 50px;
+			}
+		}
+	}
 }

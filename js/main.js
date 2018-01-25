@@ -1,43 +1,20 @@
-Vue.component('updater-cards', {
-	props: ['cards']
-})
-
 Vue.component('updater-card', {
-	// props: {
-	//	name: {required: true}, 
-	//	logoUrl: {required: true}, 
-	//	img: {required: true}, 
-	//	promoMessage: {required: false}, 
-	//	promoCode: {required: false}, 
-	//	ctaUrl: {required: true}, 
-	//	ctaText: {required: true}, 
-	//	features: {required: false}, 
-	//	profileHref: {required: false}
-	//},
-	props: ['cards'],
+	props: ['info'],
 	template: `
 		<div class="card">
-			<div class="logo"><img src="{{logoUrl}}" alt=""></div>
-			<div class="company">{{name}}</div>
-			<div class="promo">{{promoMessage}}</div>
-			<div class="promo-code" v-if="promoCode != ''" v-show="isVisible">Use promo code:<span>{{promoCode}}</span></div>
-			<ul class="features">
-				<li v-for="feature in features">{{feature}}</li>
-			</ul>
-			<a target="_blank" href="{{profileHref}}" class="profile" v-show="">View Profile</div>
-			<a target="_blank" href="{{ctaUrl}}" class="button">{{ctaText}}</a>
+			<div class="info">
+				<div class="logo"><img :src="''+info.logoUrl+''" alt=""></div>
+				<div class="company text-center text-bold text-gray">{{info.name}}</div>
+				<div class="promo text-center" v-if="info.promoMessage != ''">{{info.promoMessage}}</div>
+				<div class="promo-code text-center" v-if="info.promoCode != ''">Use promo code:<span class="bold">{{info.promoCode}}</span></div>
+				<ul class="features" v-if="info.features.length > 0">
+					<li v-for="feature in info.features"><i class="fa fa-check" aria-hidden="true"></i> {{feature}}</li>
+				</ul>
+				<a target="_blank" :href="''+info.profileHref+''" class="profile text-bold text-center"  v-if="info.profileHrefe != ''">View Profile</a>
+				<a target="_blank" :href="''+info.ctaUrl+''" class="button text-bold text-center">{{info.ctaText}}</a>
+			</div>
 		</div>
-		`,
-	
-	data(){
-		return{
-			//isVisible: true
-		}
-	},
-
-	methods: {
-		
-	}
+		`
 })
 
 
