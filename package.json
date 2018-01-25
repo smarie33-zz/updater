@@ -18,17 +18,9 @@
   },
   "homepage": "https://github.com/smarie33/updater#readme",
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
     "browser-sync": "^2.23.5",
     "gulp": "^3.9.1",
-    "gulp-babel": "^7.0.0",
     "gulp-sass": "^3.1.0",
     "run-sequence": "^2.2.1"
-  },
-  "babel": {
-    "presets": [
-      "env"
-    ]
   }
 }
