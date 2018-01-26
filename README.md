@@ -15,7 +15,7 @@ the mobile image above.
 + Each object property also gets its own class so specific styling can be applied to each area.
 + `v-if` directives are used to switch between padding only divs and object derived elements depending on if the corresponding property is in the object.
 + The profile link and CTA are wrapped in a div that sits at the bottom of the card so that the bottom of every card is aligned no matter what the spacing is above.
-+ ES6 is used to make all cards the same heigh on page load and browser resize.
++ ES6 is used to make all cards the same height on page load and browser resize.
 
 #### How to use the component
 + Use the component in your vue page by adding the `<updater-card></updater-card>` tags
