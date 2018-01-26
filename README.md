@@ -23,7 +23,7 @@ the mobile image above.
 + use the `v-for` directive to iterate over the object and print one or more cards
 
 ### Run
-`npm install`
-`$   gulp`
++ `npm install`
++ `$   gulp`
 OR
 `$   npm build`
