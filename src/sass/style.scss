@@ -2,7 +2,7 @@
 
 $black: #000000;
 $white: #ffffff;
-$gray: #c6c6c6;
+$gray: #eeeeee;
 $green: #1d9d74;
 $blue: #1d698d;
 $break: 992px;
@@ -38,22 +38,52 @@ html,body{
 	color: $gray;
 }
 
+#cards{
+	text-align: center;
+}
 .card{
-	max-width: 500px;
+	width: 400px;
 	border: 20px solid $gray;
 	display:inline-block;
+	margin:5px;
+	vertical-align: top;
+	position: relative;
+	padding-bottom: 60px;
+	@media screen and (max-width: $break) {
+		width: 300px;
+	}
 
 	.info{
-		padding: 50px;
-		.logo{
+		padding: 30px 20px;
+		.logo img{
 			margin:auto;
+			display: block;
 		}
 		.company{
 			font-size: 10px;
 		}
 		.features{
+			list-style-type: none;
+			padding-left: 0;
+			margin: 0;
+			li{
+				text-align:left;
+			}
+			
 			@media screen and (max-width: $break) {
 				display: none;
+			}
+			.fa-check{
+				color: $green;
+			}
+
+		}
+		.bottom{
+			position: absolute;
+			bottom: 30px;
+			width: 90%;
+			@media screen and (max-width: $break) {
+				width: 85%;
 			}
 		}
 		.profile{
@@ -61,18 +91,36 @@ html,body{
 			color: $black;
 			display: block;
 			margin: auto;
-		}
-		.button{
-			display: block;
-			text-decoration: none;
-			margin: auto;
-			padding: 30px 100px;
-			background-color: $blue;
-			color: $white;
-			border-radius: 5px;
+			font-size: 12px;
 			@media screen and (max-width: $break) {
-				padding: 15px 50px;
+				display: none;
 			}
 		}
+		.button{
+			text-decoration: none;
+		    margin: auto;
+		    display: block;
+		    font-size: 12px;
+		    padding: 20px 40px;
+		    background-color: #1d698d;
+		    color: #ffffff;
+		    border-radius: 5px;
+		    position: relative;
+		    max-width: 100px;
+			@media screen and (max-width: $break) {
+				padding: 15px 30px;
+				border-radius: 3px;
+			}
+		}
+		
 	}
+}
+
+@for $i from 1 through 10 {
+    .padding-top-#{$i} {
+        padding-top: ($i * 10)+px;
+    }
+    .padding-bottom-#{$i} {
+        padding-bottom: ($i * 10)+px;
+    }
 }
