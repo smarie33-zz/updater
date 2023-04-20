@@ -18,8 +18,8 @@
   },
   "homepage": "https://github.com/smarie33/updater#readme",
   "devDependencies": {
-    "browser-sync": "^2.23.5",
-    "gulp": "^3.9.1",
+    "browser-sync": "^2.29.1",
+    "gulp": "^4.0.2",
     "gulp-sass": "^3.1.0",
     "run-sequence": "^2.2.1"
   }
